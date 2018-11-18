@@ -1,0 +1,124 @@
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+
+			<meta charset="UTF-8">
+			<title>Калькулятор</title>
+			<link href="http://allfont.ru/allfont.css?fonts=europe-normal" rel="stylesheet" type="text/css" />
+			<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+			<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+
+			<style type="text/css">
+			
+		</style>
+
+
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<div class="parent">
+					<div class="logo">
+						<img src="img/logo.jpg"> 
+					</div>
+					<div class="number">
+						8-800-100-5005 <br>
+						+7 (342)522-000
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div id="menu">
+					<ul>
+						<li><a href="1.html">Кредитные карты</a></li> 
+						<li><a class="active" href="index.html">Вклады</a></li> 
+						<li><a href="3.html">Дебетовая карта</a></li> 
+						<li><a href="4.html">Страхование</a></li> 
+						<li><a href="4.html">Друзья</a></li> 
+						<li><a href="4.html">Интернет-банк</a></li> 
+					</ul>
+				</div>
+				<br>
+				<div  id="crumbs">
+					<ul>
+						<li><a href="#1">Главная</a></li>
+						<li><a href="#2">Вклады</a></li>
+						<li><a href="#3" class="current">Калькулятор</a></li>
+					</ul>
+					<br><br>
+				</div>
+			</header>
+
+
+
+
+
+			<div class="calc">
+				<label class="calc_name">Калькулятор</label>
+				<form id="calc"  method="post">
+					<div  class="form-line">
+						<label class="label">Дата оформления вклада:</label>
+						<input type="text" name="date" id="datepicker" readonly="readonly">
+					</div>
+					<div class="form-line">
+						<label class="label">Сумма вклада:</label>
+						<input type="number" id="amount1"  name="summa" min="1000" max="3000000" pattern="^[0-9]+$">
+						<div class="sli1" id="slider1"></div>
+					</div>
+					<div class="form-line">
+						<label class="label">Срок вклада</label>
+						<select  name="srok"> 
+							<option value="12">1 год</option> 
+							<option value="24">2 года</option> 
+							<option value="36">3 года</option> 
+							<option value="48">4 года</option> 
+							<option value="60">5 лет</option> 
+						</select> 
+					</div>
+					<div  class="form-line">
+						<label class="label">Пополнение вклада:</label>
+						<input class="radio" type="radio" name="check" value="1"/> Да
+						<input class="radio" type="radio" name="check" value="0" checked="1"/> Нет 
+					</div>
+					<div  class="form-line">
+						<label class="label">Сумма пополнения вклада:</label>
+						<input type="number" id="amount2" name="popolnenie" min="1000" max="3000000" pattern="^[0-9]+$">
+						<div class="sli2" id="slider2"></div>
+					</div>
+					<div class="form-line form-line--submit">
+						<input class="submit" style="" type="submit" value="Рассчитать">
+						<div style="display: inline-block;" class="sum">
+							Результат:
+							<span id="result"></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		
+		
+
+
+		<div id="footer">
+			<ul>
+				<li><a href="1.html">Кредитные карты</a></li> 
+				<li><a href="2.html">Вклады</a></li> 
+				<li><a href="3.html">Дебетовая карта</a></li> 
+				<li><a href="4.html">Страхование</a></li> 
+				<li><a href="4.html">Друзья</a></li> 
+				<li><a href="4.html">Интернет-банк</a></li> 
+			</ul>
+		</div>
+		
+	</body>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/calcView.js"></script>
+	<script src="/ajaxHandler.js"></script>
+
+	</html>
+
+
