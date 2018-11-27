@@ -11,9 +11,7 @@
 
 
 
-			<style type="text/css">
 			
-		</style>
 
 
 	</head>
@@ -57,14 +55,14 @@
 
 			<div class="calc">
 				<label class="calc_name">Калькулятор</label>
-				<form id="calc"  method="post">
+				<form id="calc" class="validate" method="post">
 					<div  class="form-line">
 						<label class="label">Дата оформления вклада:</label>
-						<input type="text" name="date" id="datepicker" readonly="readonly">
+						<input type="text" class="date" name="date" id="datepicker" readonly="readonly"  value="мм.дд.гггг" >
 					</div>
 					<div class="form-line">
 						<label class="label">Сумма вклада:</label>
-						<input type="number" id="amount1"  name="summa" min="1000" max="3000000" pattern="^[0-9]+$">
+						<input type="number" id="amount1"  name="summa" min="1000" max="3000000" value="10000" required="required" pattern="^[0-9]+$">
 						<div class="sli1" id="slider1"></div>
 					</div>
 					<div class="form-line">
@@ -80,11 +78,11 @@
 					<div  class="form-line">
 						<label class="label">Пополнение вклада:</label>
 						<input class="radio" type="radio" name="check" value="1"/> Да
-						<input class="radio" type="radio" name="check" value="0" checked="1"/> Нет 
+						<input class="radio" type="radio" name="check"  value="0" checked="1"/> Нет 
 					</div>
 					<div  class="form-line">
 						<label class="label">Сумма пополнения вклада:</label>
-						<input type="number" id="amount2" name="popolnenie" min="1000" max="3000000" pattern="^[0-9]+$">
+						<input type="number"  id="amount2" name="popolnenie" min="1000" max="3000000" value="10000"  pattern="^[0-9]+$">
 						<div class="sli2" id="slider2"></div>
 					</div>
 					<div class="form-line form-line--submit">
@@ -99,7 +97,7 @@
 		</div>
 		
 		
-		
+	
 
 
 		<div id="footer">
@@ -118,6 +116,7 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="/calcView.js"></script>
 	<script src="/ajaxHandler.js"></script>
+	
 
 	</html>
 

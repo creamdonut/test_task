@@ -21,4 +21,6 @@ $( function() {
       $( "#amount2" ).val(ui.value);
     }
   });
-} );
+});
+
+

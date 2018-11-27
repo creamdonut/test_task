@@ -8,10 +8,13 @@ $( function() {
 			method: "POST",
 	  		url: "calc.php",
 	  		data: formData,
+	  		success: function(response){
+	  			$('#result').html(response);
+	  		}
 		})
-  		.done(function( response ) {
-    		$('#result').html(response)
-		})
+  // 		.done(function( response ) {
+  //   		$('#result').html(response)
+		// })
 	} )
 
 });
