@@ -27,8 +27,8 @@ $( document ).ready(function(){
 							  $( "form" ).submit(function( event3 ){ 
 							    event3.preventDefault(); 
 							   if ($('input[name=check]:checked').val() == "1" && document.getElementById('amount2').value < "1000") 
-							   alert('Пожалуйста, введите сумму от 1 000 до 3 000 000');
+							   alert('Пожалуйста, введите сумму пополнения от 1 000 до 3 000 000');
 								if ($('input[name=check]:checked').val() == "1" && document.getElementById('amount2').value > "3000000") 
-							   alert('Пожалуйста, введите сумму от 1 000 до 3 000 000');
+							   alert('Пожалуйста, введите сумму пополнения от 1 000 до 3 000 000');
 							  });
 							});
