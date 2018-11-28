@@ -1,6 +1,6 @@
 $( function() {
-	$('#calc').on('submit', function(submitEvent) {  //.on - listener 
-		var formData = $(this).serialize(); //this === calc
+	$('#calc').on('submit', function(submitEvent) { 
+		var formData = $(this).serialize(); 
 
 		submitEvent.preventDefault();
 
@@ -12,9 +12,7 @@ $( function() {
 	  			$('#result').html(response);
 	  		}
 		})
-  // 		.done(function( response ) {
-  //   		$('#result').html(response)
-		// })
+
 	} )
 
 });

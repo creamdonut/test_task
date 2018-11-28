@@ -10,7 +10,7 @@ $( function() {
       $( "#amount1" ).val(ui.value);
     }
   });
- 
+
 
   $( "#slider2" ).slider({
     range: "min",
