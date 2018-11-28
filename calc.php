@@ -2,7 +2,7 @@
 $sum = $_POST['summa'];
 $current_month = 2;
 $month_qty = $_POST['srok'];
-$summ_add = $_POST['popolnenie'];
+$summ_add = 0;
 $check = $_POST['check'];
 $days_n = getDaysInMonth($_POST['date']); 
 $days_y = 365;
@@ -14,17 +14,14 @@ if ($check == '0') {
 	$summ_add = $_POST['popolnenie'];
 }
 
-if (empty($summ_add)) {
-	$summ_add == 0;
-}
 
 if (empty($days_n) or empty($sum)) {
 	die ('Ошибка. Выберите месяц и сумму.');
 }
 
 while ($current_month < $month_qty) {
- $final_sum = getCapitalization($final_sum, $summ_add, $days_n);
- $current_month+=1;
+	$final_sum = getCapitalization($final_sum, $summ_add, $days_n);
+	$current_month+=1;
 }
 
 function getDaysInMonth($date) {
@@ -35,14 +32,12 @@ function getDaysInMonth($date) {
 
 function getCapitalization($sum, $summ_add, $days_n){
 	global $check, $days_y;
-	if (empty($summ_add)) {
-	$summ_add = 0;
+
+	if ($check) {
+		return  $sum + (($sum + $summ_add) * $days_n * (0.1/$days_y)) + $summ_add;
+	} else {
+		return $sum + (($sum) * $days_n * (0.1/$days_y));
 	}
-if ($check == '1') {
-	return $sum + (($sum + $summ_add) * $days_n * (0.1/$days_y)) + $summ_add;
-} else {
- return $sum + (($sum) * $days_n * (0.1/$days_y));
-}
 }
 
 echo (int) $final_sum;
