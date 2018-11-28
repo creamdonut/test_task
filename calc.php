@@ -1,4 +1,5 @@
 <?php 
+error_reporting(E_ERROR);
 $sum = $_POST['summa'];
 $current_month = 2;
 $month_qty = $_POST['srok'];
